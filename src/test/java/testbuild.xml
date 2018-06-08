@@ -1,0 +1,8 @@
+<project name="test.ant.profiler" default="test">
+	<target name="test" depends="dependency">
+		<sleep seconds="2"/>
+	</target>
+	<target name="dependency">
+		<sleep seconds="3"/>
+	</target>
+</project>
