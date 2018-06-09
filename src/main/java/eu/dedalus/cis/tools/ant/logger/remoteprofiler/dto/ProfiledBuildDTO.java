@@ -20,8 +20,8 @@ public class ProfiledBuildDTO {
 	public ProfiledBuildDTO(ProfiledBuild build) {
 		username = build.getUsername();
 		hostname = build.getHostname();
-		start = build.getStart();
-		end = build.getEnd();
+		start = (Date) build.getStart().clone();
+		end = (Date) build.getEnd().clone();
 		projectName = build.getProject().getName();
 		for(ProfiledTarget target : build.getProfiledTargets()) {
 			targets.add(new ProfiledTargetDTO(target));

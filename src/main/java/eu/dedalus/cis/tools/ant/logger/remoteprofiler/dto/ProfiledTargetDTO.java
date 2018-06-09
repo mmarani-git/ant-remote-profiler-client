@@ -12,14 +12,14 @@ public class ProfiledTargetDTO {
 	private Date start;
 	private Date end;
 	private List<ProfiledTaskDTO> tasks = new Vector<ProfiledTaskDTO>();
-	
+
 	public ProfiledTargetDTO() {};
-	
+
 	public ProfiledTargetDTO(ProfiledTarget target) {
-		targetName=target.getTarget().getName();
-		start=target.getStart();
-		end=target.getEnd();
-		for(ProfiledTask task : target.getProfiledTasks() ) {
+		targetName = target.getTarget().getName();
+		start = (Date) target.getStart().clone();
+		end = (Date) target.getEnd().clone();
+		for (ProfiledTask task : target.getProfiledTasks()) {
 			tasks.add(new ProfiledTaskDTO(task));
 		}
 	}
@@ -38,5 +38,5 @@ public class ProfiledTargetDTO {
 
 	public List<ProfiledTaskDTO> getTasks() {
 		return tasks;
-	}	
+	}
 }

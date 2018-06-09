@@ -13,8 +13,8 @@ public class ProfiledTaskDTO {
 	
 	public ProfiledTaskDTO(ProfiledTask task) {
 		this.taskName=task.getTask().getTaskName();
-		this.start=task.getStart();
-		this.end = task.getEnd();
+		this.start=(Date) task.getStart().clone();
+		this.end = (Date) task.getEnd().clone();
 	}
 
 	public String getTaskName() {
