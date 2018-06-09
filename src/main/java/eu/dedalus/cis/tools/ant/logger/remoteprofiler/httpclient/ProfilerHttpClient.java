@@ -52,7 +52,7 @@ public class ProfilerHttpClient {
 		
 		profiledBuild.getProject().log(methodName + " Sending profiling data...");
 		HttpClient httpClient = HttpClientBuilder.create().build();
-		HttpPost request = new HttpPost("http://" + hostname + ":" + port + "antremoteprofiler/endpoint");
+		HttpPost request = new HttpPost("http://" + hostname + ":" + port + "/antremoteprofilerserver/RemoteProfilingServlet");
 		StringEntity stringEntity = null;
 		try {
 			stringEntity = new StringEntity(profiledBuild.toJSON());

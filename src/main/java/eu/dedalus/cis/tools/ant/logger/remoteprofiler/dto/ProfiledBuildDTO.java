@@ -15,6 +15,8 @@ public class ProfiledBuildDTO {
 	private String projectName;
 	private List<ProfiledTargetDTO> targets=new Vector<ProfiledTargetDTO>();
 	
+	public ProfiledBuildDTO() {};
+	
 	public ProfiledBuildDTO(ProfiledBuild build) {
 		username = build.getUsername();
 		hostname = build.getHostname();
@@ -42,7 +44,7 @@ public class ProfiledBuildDTO {
 		return end;
 	}
 
-	public String getProject() {
+	public String getProjectName() {
 		return projectName;
 	}
 

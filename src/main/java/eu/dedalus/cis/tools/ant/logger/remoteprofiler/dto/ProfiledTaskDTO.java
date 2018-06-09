@@ -9,6 +9,8 @@ public class ProfiledTaskDTO {
 	private Date start;
 	private Date end;
 	
+	public ProfiledTaskDTO() {};
+	
 	public ProfiledTaskDTO(ProfiledTask task) {
 		this.taskName=task.getTask().getTaskName();
 		this.start=task.getStart();

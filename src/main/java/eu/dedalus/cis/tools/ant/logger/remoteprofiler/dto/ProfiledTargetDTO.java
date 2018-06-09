@@ -13,6 +13,8 @@ public class ProfiledTargetDTO {
 	private Date end;
 	private List<ProfiledTaskDTO> tasks = new Vector<ProfiledTaskDTO>();
 	
+	public ProfiledTargetDTO() {};
+	
 	public ProfiledTargetDTO(ProfiledTarget target) {
 		targetName=target.getTarget().getName();
 		start=target.getStart();
